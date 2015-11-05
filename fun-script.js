@@ -16,6 +16,7 @@ function playGame() {
   fs.writeFile(process.cwd() + '/_data/numbers/' + number + '.json', '', function done (err) {
     if (err) return
     console.log(number)
+    usedNumbers.push(number)
     setTimeout(playGame, 5000)
   })
 
