@@ -6,7 +6,7 @@ var usedNumbers = []
 
 playGame()
 
-function playGame() {
+function playGame () {
   var number = getRandomNumber(max)
 
   while (!isNewNumber(number)) {
@@ -21,12 +21,12 @@ function playGame() {
   })
 
   function isNewNumber (number) {
-    if (usedNumbers.indexOf(number) === -1 && number != 0) {
+    if (usedNumbers.indexOf(number) === -1 && number !== 0) {
       return true
     }
   }
 
-  function getRandomNumber(max) {
+  function getRandomNumber (max) {
     return Math.round(Math.random() * max)
   }
 }

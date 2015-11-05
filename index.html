@@ -16,7 +16,7 @@ layout: default
   var list = document.querySelector('.js-numbers')
 
   // Get existing numbers from _data
-  var numbers = "{% for number in site.data.numbers %}{{ number[0] }},{% endfor%}"
+  var numbers = '{% for number in site.data.numbers %}{{ number[0] }},{% endfor%}'
   // Make array of number, remove NULL (from the last comma)
   var currentNumbers = numbers.split(',').filter(function (number) { return !!number })
   // Find list of numbers in localStorage, if none found, start from empty array
