@@ -50,6 +50,18 @@ $ jekyll server -w
 
 4. Mark numbers as they are called until bingo
 
+### Restart
+
+1. Delete all the files in `_data/numbers`
+
+2. Clear `localStorage` by doing
+
+  ```javascript
+  localStorage.removeItem('numbers')
+  ```
+
+  in the console
+
 ## License
 
 MIT
