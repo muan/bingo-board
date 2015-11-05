@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/css/main.css'>
+  </head>
+
+  <body>
+    <div class="wrapper">
+  <div class="board">
+    <h1>Pull Request Bingo!</h1>
+    <div class="populate-options">
+      <p>Populate your board with numbers from a range:</p>
+      <button id="one-hundred-btn">100</button>
+      <button id="fifty-btn">50</button>
+    </div>
+    <div class="row">
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+    <div class="row">
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+    <div class="row">
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+    <div class="row">
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+    <div class="row">
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+      <span class="square"></span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // Listen for clicks on squares
+  var squares = document.querySelectorAll(".square")
+  Array.prototype.forEach.call(squares, function (square) {
+    square.addEventListener("click", function clickedSquare (event) {
+      if (square.classList.contains("selected")) {
+        square.classList.remove("selected")
+      } else {
+        square.classList.add("selected")
+      }
+    })
+  })
+
+  // Populate buttons
+  var oneHundredBtn = document.getElementById('one-hundred-btn')
+  var fiftyBtn = document.getElementById('fifty-btn')
+
+  oneHundredBtn.addEventListener("click", function clickedOneHundred (event) {
+    populateBoard(100)
+  })
+
+  fiftyBtn.addEventListener("click", function clickedOneFifty (event) {
+    populateBoard(50)
+  })
+
+  // Populate squares
+  function populateBoard (max) {
+    var usedNumbers = []
+    Array.prototype.forEach.call(squares, function (square) {
+      var number = getRandomNumber(max)
+
+      while (!isNewNumber(usedNumbers, number)) {
+        number = getRandomNumber(max)
+      }
+
+      usedNumbers.push(number)
+      square.textContent = number
+    })
+  }
+
+  function isNewNumber (usedNumbers, number) {
+    if (usedNumbers.indexOf(number) === -1) {
+      return true
+    }
+  }
+
+  function getRandomNumber (max) {
+    return Math.round(Math.random() * max)
+  }
+</script>
+
+  </body>
+
+</html>

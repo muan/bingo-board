@@ -58,3 +58,8 @@ button:hover {
 .selected {
   background-color: salmon;
 }
+
+.is-new:before {
+  content: 'NEW';
+  color: red;
+}
