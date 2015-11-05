@@ -48,6 +48,7 @@ body {
 }
 
 .square {
+  cursor: pointer;
   display: inline-block;
   background-color: #E4EEEE;
   color: #fff;
