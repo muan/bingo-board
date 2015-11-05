@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica;
+  font-family: Montserrat;
   color: #333;
   margin: 0;
 }
@@ -70,7 +70,40 @@ body {
   background-color: salmon;
 }
 
-.is-new:before {
-  content: 'NEW';
+.is-new {
   color: red;
+}
+
+.is-new:after {
+  background: red;
+  display: block;
+  width: 60px;
+  padding: 7px 10px;
+  margin: auto;
+  font-size: 14px;
+  content: 'NEW';
+  color: white;
+}
+
+.numbers {
+  text-align: center;
+  list-style: none;
+  font-size: 24px;
+  padding: 0;
+}
+
+.numbers li {
+  margin-bottom: 10px;
+}
+
+.numbers li:nth-child(1) {
+  font-size: 90px;
+}
+
+.numbers li:nth-child(2) {
+  font-size: 75px;
+}
+
+.numbers li:nth-child(3) {
+  font-size: 60px;
 }
