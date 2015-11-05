@@ -10,14 +10,14 @@ layout: default
 </div>
 
 <script type="text/javascript">
-  numbers = "{% for number in site.data.numbers %}{{ number[0] }},{% endfor%}"
+  var numbers = "{% for number in site.data.numbers %}{{ number[0] }},{% endfor%}"
   var list = document.querySelector('.js-numbers')
   var memorizedList = localStorage.getItem('numbers') ? localStorage.getItem('numbers').split(',') : []
   var currentNumbers = numbers.split(',').filter(function (no) { return !!no })
   var newNumbers = []
 
-  currentNumbers.forEach(function(no) {
-    if(memorizedList.indexOf(no) < 0) {
+  currentNumbers.forEach(function (no) {
+    if (memorizedList.indexOf(no) < 0) {
       newNumbers.push(no)
       memorizedList.push(no)
     }
@@ -26,10 +26,10 @@ layout: default
   localStorage.setItem('numbers', memorizedList)
 
   memorizedList.reverse().forEach(function (no) {
-    if(no === 'null') return
+    if (no === 'null') return
     var li = document.createElement('li')
     li.innerText = no
-    if(newNumbers.indexOf(no) >= 0) {
+    if (newNumbers.indexOf(no) >= 0) {
       li.classList.add('is-new')
     }
     list.appendChild(li)
