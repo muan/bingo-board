@@ -89,7 +89,7 @@ layout: default
   }
 
   function isNewNumber (usedNumbers, number) {
-    if (usedNumbers.indexOf(number) === -1) {
+    if (usedNumbers.indexOf(number) === -1 && number != 0) {
       return true
     }
   }
