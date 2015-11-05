@@ -15,6 +15,13 @@ body {
   overflow: auto;
 }
 
+.instructions {
+  width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
 .populate-options {
   margin: 18px 0;
   text-align: center;
