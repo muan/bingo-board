@@ -1,11 +1,16 @@
 body {
   font-family: Helvetica;
   color: #333;
+  margin: 0;
 }
 
 .wrapper {
   margin: 0 auto;
   width: 700px;
+}
+
+.header {
+  text-align: center;
 }
 
 .board {
@@ -22,19 +27,18 @@ body {
   text-align: left;
 }
 
-.populate-options {
-  margin: 18px 0;
-  text-align: center;
-}
-
-button {
-  padding: 4px 8px;
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
   background-color: #E4E95A;
   border: none;
   border-radius: 2px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
 }
 
-button:hover {
+.btn:hover {
   cursor: pointer;
   background-color: #C8CE28;
 }
