@@ -2,14 +2,14 @@
 
 var fs = require('fs')
 var max = process.argv[2]
+var usedNumbers = []
 
 playGame()
 
 function playGame() {
-  var usedNumbers = []
   var number = getRandomNumber(max)
 
-  while (!isNewNumber(usedNumbers, number)) {
+  while (!isNewNumber(number)) {
     number = getRandomNumber(max)
   }
 
@@ -20,7 +20,7 @@ function playGame() {
     setTimeout(playGame, 5000)
   })
 
-  function isNewNumber (usedNumbers, number) {
+  function isNewNumber (number) {
     if (usedNumbers.indexOf(number) === -1 && number != 0) {
       return true
     }
