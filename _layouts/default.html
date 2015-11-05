@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='{{ site.url }}/css/main.css'>
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
   </head>
 
   <body>
     <div class="wrapper">
       {{ content }}
     </div>
+
+    {% if page.script %}
+    	<script type="text/javascript" src="{{ site.url }}/game/{{ page.script }}"></script>
+    {% endif %}
   </body>
 
 </html>
