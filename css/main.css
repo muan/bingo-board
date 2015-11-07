@@ -40,7 +40,7 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: #C8CE28;
+  background-color: #8BAFAF;
 }
 
 .row + .row {
@@ -50,7 +50,7 @@ body {
 .square {
   cursor: pointer;
   display: inline-block;
-  background-color: #E4EEEE;
+  background-color: #C1D8D8;
   color: #fff;
   width: 100px;
   height: 100px;
