@@ -7,3 +7,6 @@ branches:
   only:
   - gh-pages
   - "/.+/"
+before_install:
+  - npm install tape
+  
