@@ -1,5 +1,5 @@
 language: javascript
-script: node test.js
+script: standard && node test.js
 sudo: false
 notifications:
   email: false
@@ -9,4 +9,4 @@ branches:
   - "/.+/"
 before_install:
   - npm install tape
-  
+  - npm install standard
