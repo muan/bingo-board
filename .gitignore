@@ -2,3 +2,4 @@
 _site
 .jekyll-metadata
 .ruby-version
+node_modules
