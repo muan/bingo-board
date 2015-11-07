@@ -1,0 +1,9 @@
+language: javascript
+script: node test.js
+sudo: false
+notifications:
+  email: false
+branches:
+  only:
+  - gh-pages
+  - "/.+/"
