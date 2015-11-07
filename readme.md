@@ -1,4 +1,4 @@
-# Pull request bingo game [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# Pull request bingo game [![Build Status](https://travis-ci.org/muan/bingo-board.svg?branch=gh-pages)](https://travis-ci.org/muan/bingo-board) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 This is a game where people use Pull Request to submit numbers for [bingo](https://en.wikipedia.org/wiki/Bingo_(U.S.)). A Gamemaster will merge Pull Requests, and upon merge, the numbered file added to the repository becomes the next number called. 
 
