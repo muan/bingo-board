@@ -40,7 +40,7 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: #8BAFAF;
+  background-color: #C8CE28;
 }
 
 .row + .row {
@@ -64,7 +64,7 @@ body {
 }
 
 .square:hover {
-  background-color: #C1D8D8;
+  background-color: #8BAFAF;
 }
 
 .selected {
